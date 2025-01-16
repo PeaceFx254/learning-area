@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KHSXQHF6');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Loader styles */
+    .loader {
+      border: 8px solid #f3f3f3; /* Light grey background */
+      border-top: 8px solid #3498db; /* Blue color for the spinner */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    /* Animation for the loader */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Discussion board container */
+    .discussion-board {
+      width: 100%;
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: none;
+    }
+
+    /* Post structure */
+    .post {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .post:last-child {
+      border-bottom: none;
+    }
+
+    .post .username {
+      font-weight: bold;
+      color: #3498db;
+    }
+
+    .post .content {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Like button */
+    .like-btn {
+      background-color: #3498db;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+
+    .like-btn:hover {
+      background-color: #2980b9;
+    }
+
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHSXQHF6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Loader -->
+  <div class="loader" id="loader"></div>
+
+  <!-- Discussion Board Content -->
+  <div class="discussion-board" id="discussionBoard">
+    <div class="post">
+      <span class="username">User123</span>
+      <p class="content">This is a great discussion topic! Let's talk about web development.</p>
+      <button class="like-btn" onclick="likePost(this)">Like</button>
+    </div>
+    <div class="post">
+      <span class="username">DevMaster</span>
+      <p class="content">Web development is evolving so fast. Excited to see what comes next!</p>
+      <button class="like-btn" onclick="likePost(this)">Like</button>
+    </div>
+  </div>
+
+  <script>
+    // Simulate a loading time of 3 seconds
+    setTimeout(() => {
+      // Hide the loader and display the discussion board content
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('discussionBoard').style.display = 'block';
+    }, 3000); // 3000ms = 3 seconds
+
+    // Function to handle likes per account (simulate user-based like action)
+    function likePost(button) {
+      // Check if the user has already liked this post (for demo purposes, we'll just toggle the color)
+      if (button.style.backgroundColor === 'rgb(41, 128, 185)') {
+        button.style.backgroundColor = '#3498db'; // Change back to original
+        button.innerText = 'Like';
+      } else {
+        button.style.backgroundColor = '#2980b9'; // Liked state
+        button.innerText = 'Liked';
+      }
+    }
+  </script>
+  <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="6788b6f8ab8dda09f10b66e4" async></script>
+  <script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="9b1e6c29-771c-4074-8cc3-cd6b3f6dacc2"></script>
+  
+</body>
+</html>
